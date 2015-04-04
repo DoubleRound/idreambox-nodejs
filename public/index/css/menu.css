@@ -1,0 +1,143 @@
+.list-group a {
+    padding-left: 70px;;
+    font-size: 15px;
+}
+
+.img-ico {
+    dispaly: inline;
+    *zoom: 1;
+    background: url('/index/images/btn_icon.gif?t=201402260053?@=-1') no-repeat;
+}
+
+.list-group-item span, .img-ico {
+    float: left;
+}
+
+.list-group-item .img-ico {
+    width: 23px;
+    height: 22px;
+    position: absolute;
+    left: 35px;
+    top: 9px;
+    margin: 0;
+}
+
+.aside-mfile {
+    background-position: -205px -0px;
+}
+
+a:hover .aside-mfile, a:active .aside-mfile {
+    background-position: -228px -0px;
+}
+
+.on .aside-mfile, .on:link .aside-mfile, .on:link .aside-mfile, .on:hover .aside-mfile, .on:active .aside-mfile {
+    background-position: -228px -0px;
+}
+
+.aside-mpic {
+    background-position: -205px -21px;
+}
+
+a:hover .aside-mpic, a:active .aside-mpic {
+    background-position: -228px -21px;
+}
+
+.on .aside-mpic, .on:link .aside-mpic, .on:link .aside-mpic, .on:hover .aside-mpic, .on:active .aside-mpic {
+    background-position: -228px -21px;
+}
+
+.aside-mdoc {
+    background-position: -205px -44px;
+}
+
+a:hover .aside-mdoc, a:active .aside-mdoc {
+    background-position: -228px -44px;
+}
+
+.on .aside-mdoc, .on:link .aside-mdoc, .on:link .aside-mdoc, .on:hover .aside-mdoc, .on:active .aside-mdoc {
+    background-position: -228px -44px;
+}
+
+.aside-mvideo {
+    background-position: -205px -89px;
+}
+
+a:hover .aside-mvideo, a:active .aside-mvideo {
+    background-position: -228px -89px;
+}
+
+.on .aside-mvideo, .on:link .aside-mvideo, .on:link .aside-mvideo, .on:hover .aside-mvideo, .on:active .aside-mvideo {
+    background-position: -228px -89px;
+}
+
+.aside-mbt {
+    background-position: -252px 0;
+}
+
+a:hover .aside-mbt, a:active .aside-mbt {
+    background-position: -275px 0;
+}
+
+.on .aside-mbt, .on:link .aside-mbt, .on:link .aside-mbt, .on:hover .aside-mbt, .on:active .aside-mbt {
+    background-position: -275px 0;
+}
+
+.aside-mmusic {
+    background-position: -205px -66px;
+}
+
+a:hover .aside-mmusic, a:active .aside-mmusic {
+    background-position: -228px -66px;
+}
+
+.on .aside-mmusic, .on:link .aside-mmusic, .on:link .aside-mmusic, .on:hover .aside-mmusic, .on:active .aside-mmusic {
+    background-position: -228px -66px;
+}
+
+.aside-moth {
+    background-position: -205px -177px;
+}
+
+a:hover .aside-moth, a:active .aside-moth {
+    background-position: -228px -177px;
+}
+
+.on .aside-moth, .on:link .aside-moth, .on:link .aside-moth, .on:hover .aside-moth, .on:active .aside-moth {
+    background-position: -228px -177px;
+}
+
+.aside-recycle {
+    background-position: -205px -151px;
+}
+
+a:hover .aside-recycle, a:active .aside-recycle {
+    background-position: -228px -151px;
+}
+
+.on .aside-recycle, .on:link .aside-recycle, .on:link .aside-recycle, .on:hover .aside-recycle, .on:active .aside-recycle {
+    background-position: -228px -151px;
+}
+
+.aside-mdisk {
+    background-position: -279px -155px;
+}
+
+a:hover .aside-mdisk, a:active .aside-mdisk {
+    background-position: -279px -180px;
+}
+
+.on .aside-mdisk, .on:link .aside-mdisk, .on:link .aside-mdisk, .on:hover .aside-mdisk, .on:active .aside-mdisk {
+    background-position: -279px -180px;
+}
+
+.aside-offdownload {
+    background-position: -158px 3px;
+}
+
+a:hover .aside-offdownload, a:active .aside-offdownload {
+    background-position: -181px 3px;
+}
+
+.on .aside-offdownload, .on:link .aside-offdownload, .on:link .aside-offdownload, .on:hover .aside-offdownload, .on:active .aside-offdownload {
+    background-position: -181px 3px;
+}

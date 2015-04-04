@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+    
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css'/>
+
+    <!-- 引入基础js&css -->
+    <% include common/header.ejs %>
+
 </head>
 <body>
-<h1><%= title %></h1>
 
-<p>Welcome to <%= title %></p>
+<!-- 引入导航栏 -->
+<% include common/navbar.ejs %>
+
+<!-- 引入主页面 -->
+<% include main.ejs %>
+
+<!-- 引入页脚 -->
+<% include common/footer.ejs %>
+
 </body>
 </html>
