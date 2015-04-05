@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title><%= title %></title>
+
+    <!-- 引入基础js&css -->
+    <% include ../common/header.ejs %>
+    <link rel="stylesheet" href="/user/css/login.css"/>
+
+</head>
+<body>
+
+<!-- 引入导航栏 -->
+<% include ../common/navbar.ejs %>
+
+<!-- 主页面开始 -->
+<div class="container">
+    <div class="row row-offcanvas row-offcanvas-right">
+
+        <div class="col-xs-12 col-sm-7">
+            <div class="login_pictures_picture"></div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 sidebar-offcanvas login_form_sidebar" id="sidebar">
+            <div class="modal-dialog login-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="gridSystemModalLabel">用户登录</h3>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-signin login_form" action="/doLogin">
+                            <label for="inputEmail" class="sr-only">Email address</label>
+                            <input type="email" id="inputEmail" class="form-control input-lg login_form_input" placeholder="Email address" required autofocus/>
+
+                            <label for="inputPassword" class="sr-only">Password</label>
+                            <input type="password" id="inputPassword" class="form-control input-lg login_form_input" placeholder="Password" required/>
+
+                            <div class="has-feedback">
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="remember-me"/> 下次自动登录 </label>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-lg btn-primary btn-block" type="submit">登&nbsp;录</button>
+                        </form>
+
+                        <p class="text-muted">还没有iDreambox帐号？<a href="/reg">免费注册</a></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<!-- 主界面结束 -->
+
+<!-- 引入页脚 -->
+<% include ../common/footer.ejs %>
+
+</body>
+</html>

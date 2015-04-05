@@ -1,0 +1,47 @@
+body {
+    /*min-height: 2220px;*/
+    padding-top: 70px;
+}
+
+.login_pictures_picture {
+    background: url('/user/images/tg-chang1ea8a2.png') no-repeat;
+    background-position: right 30px;
+    position: absolute;
+    left: 0;
+    right: 130px;
+    top: 0;
+    height: 425px;
+    _width: 100%;
+}
+
+.login_form_sidebar {
+    left: -50px;
+    top: 10px;
+}
+
+.login_form_bj {
+    height: 425px;
+    _width: 100%;
+    border: 2px;
+    border-color: inherit;
+}
+
+.login-dialog {
+    width: 365px;
+}
+
+.login-dialog .modal-body {
+    height: 300px;
+}
+
+.login_form .login_form_input {
+    margin-top: 15px;
+}
+
+.login_form .checkbox {
+    margin-top: 15px;
+}
+
+.login_form button {
+    margin-top: 15px;
+}
