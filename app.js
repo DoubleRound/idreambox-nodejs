@@ -4,10 +4,13 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var session = require('express-session');
+var parseurl = require('parseurl');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var login = require('./routes/user/login');
+var doLogin = require('./routes/user/doLogin');
 
 var app = express();
 
@@ -16,16 +19,46 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
-//app.use(favicon(__dirname + '/public/favicon.ico'));
+// app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session({
+    secret: 'C0F81E480B02E8EBF1F25CDB12EDF81D',
+    name: 'www.idreambox.org',   //这里的name值得是cookie的name，默认cookie的name是：connect.sid
+    cookie: {maxAge: 80000},  //设置maxAge是80000ms，即80s后session和相应的cookie失效过期
+    resave: false,
+    saveUninitialized: true
+}));
+
+/**
+ * 登录拦截器
+ **/
+app.use(function (req, res, next) {
+    var user = req.session.user;
+
+    if (!user) {
+        user = req.session.user = {};
+    }
+
+    // 排除首页不加入拦截
+    var pathname = parseurl(req).pathname;
+    if (pathname != "/" && pathname != "/login" && pathname != "/doLogin" && !user.email) {
+        res.redirect('/login');
+    }
+
+    res.locals.user = user;
+
+    next();
+});
+
 app.use('/', routes);
 app.use('/users', users);
 app.use('/login', login);
+app.use('/doLogin', doLogin);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

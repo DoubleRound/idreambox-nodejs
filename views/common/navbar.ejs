@@ -37,10 +37,14 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <!--<li><a href="#">您好，Ⅸ半城戒ㄣ木</a></li>
-                <li><a href="#">[退出]</a></li>-->
-                <li><a href="/login">[登录]</a></li>
-                <li><a href="/reg">[注册]</a></li>
+                <% if(user.username != undefined) { %>
+                    <li><a href="#">您好，<%= user.username %></a></li>
+                    <li><a href="#">[退出]</a></li>
+                <% } else { %>
+                    <li><a href="/login">[登录]</a></li>
+                    <li><a href="/reg">[注册]</a></li>
+                <% } %>
+
             </ul>
         </div>
 

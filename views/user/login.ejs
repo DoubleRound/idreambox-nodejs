@@ -25,20 +25,20 @@
         <div class="col-xs-12 col-sm-4 sidebar-offcanvas login_form_sidebar" id="sidebar">
             <div class="modal-dialog login-dialog">
                 <div class="modal-content">
-                    <div class="modal-header">
+                    <div class="modal-header login-form-header">
                         <h3 class="modal-title" id="gridSystemModalLabel">用户登录</h3>
                     </div>
                     <div class="modal-body">
-                        <form class="form-signin login_form" action="/doLogin">
+                        <form class="form-signin login_form" action="/doLogin" method="post">
                             <label for="inputEmail" class="sr-only">Email address</label>
-                            <input type="email" id="inputEmail" class="form-control input-lg login_form_input" placeholder="Email address" required autofocus/>
+                            <input type="email" name="email" class="form-control input-lg login_form_input" placeholder="Email address" required autofocus/>
 
                             <label for="inputPassword" class="sr-only">Password</label>
-                            <input type="password" id="inputPassword" class="form-control input-lg login_form_input" placeholder="Password" required/>
+                            <input type="password" name="password" class="form-control input-lg login_form_input" placeholder="Password" required/>
 
                             <div class="has-feedback">
                                 <div class="checkbox">
-                                    <label><input type="checkbox" value="remember-me"/> 下次自动登录 </label>
+                                    <label><input type="checkbox" name="auto" value="auto" /> 下次自动登录 </label>
                                 </div>
                             </div>
 
