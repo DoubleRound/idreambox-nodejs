@@ -44,8 +44,9 @@ app.use(function (req, res, next) {
         user = req.session.user = {};
     }
 
-    // 排除首页不加入拦截
     var pathname = parseurl(req).pathname;
+
+    // 设置首页、登录页、登录处理页不加入拦截
     if (pathname != "/" && pathname != "/login" && pathname != "/doLogin" && !user.email) {
         res.redirect('/login');
     }
