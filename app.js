@@ -46,8 +46,8 @@ app.use(function (req, res, next) {
 
     var pathname = parseurl(req).pathname;
 
-    // 设置首页、登录页、登录处理页不加入拦截
-    if (pathname != "/" && pathname != "/login" && pathname != "/doLogin" && !user.email) {
+    // 设置不加入拦截的连接
+    if (pathname != "/" && pathname != "/login" && pathname != "/doLogin" && pathname != "/reg" && !user.email) {
         res.redirect('/login');
     }
 
