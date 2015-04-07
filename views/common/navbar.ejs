@@ -37,7 +37,7 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <% if(user.username != undefined) { %>
+                <% if(user && user.username) { %>
                     <li><a href="/users">您好，<%= user.username %></a></li>
                     <li><a href="/logout">[退出]</a></li>
                 <% } else { %>

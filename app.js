@@ -11,6 +11,7 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 var login = require('./routes/user/login');
 var doLogin = require('./routes/user/doLogin');
+var logout = require('./routes/user/logout');
 
 var app = express();
 
@@ -26,16 +27,17 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// 注册session
 app.use(session({
     secret: 'C0F81E480B02E8EBF1F25CDB12EDF81D',
-    name: 'www.idreambox.org',   //这里的name值得是cookie的name，默认cookie的name是：connect.sid
-    cookie: {maxAge: 80000},  //设置maxAge是80000ms，即80s后session和相应的cookie失效过期
+    name: 'www.idreambox.org',
+    cookie: {maxAge: 1000 * 60 * 30},
     resave: false,
     saveUninitialized: true
 }));
 
 /**
- * 登录拦截器
+ * 注册登录拦截器
  **/
 app.use(function (req, res, next) {
     var user = req.session.user;
@@ -60,6 +62,7 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/login', login);
 app.use('/doLogin', doLogin);
+app.use('/logout', logout);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
