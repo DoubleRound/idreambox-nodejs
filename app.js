@@ -7,6 +7,8 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var parseurl = require('parseurl');
 
+var config = require('./routes/config/config');
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var login = require('./routes/user/login');
@@ -48,9 +50,11 @@ app.use(function (req, res, next) {
 
     var pathname = parseurl(req).pathname;
 
-    // 设置不加入拦截的连接
-    if (pathname != "/" && pathname != "/login" && pathname != "/doLogin" && pathname != "/reg" && !user.email) {
+    // 设置不加入拦截的请求路径
+    // 在routes/config/config.js中配置
+    if (pathname != "/" && config.excludePattern.indexOf(pathname) < 0 && !user.email) {
         res.redirect('/login');
+        return;
     }
 
     res.locals.user = user;
