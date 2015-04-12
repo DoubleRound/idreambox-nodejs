@@ -53,8 +53,7 @@ app.use(function (req, res, next) {
     // 设置不加入拦截的请求路径
     // 在routes/config/config.js中配置
     if (pathname != "/" && config.excludePattern.indexOf(pathname) < 0 && !user.email) {
-        res.redirect('/login');
-        return;
+        return res.redirect('/login');
     }
 
     res.locals.user = user;
@@ -62,6 +61,9 @@ app.use(function (req, res, next) {
     next();
 });
 
+/**
+ * 配置请求
+ **/
 app.use('/', routes);
 app.use('/users', users);
 app.use('/login', login);
