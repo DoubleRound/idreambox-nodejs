@@ -7,8 +7,7 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var parseurl = require('parseurl');
 
-var config = require('./routes/config/config');
-
+var config = require('./common/config/config');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var login = require('./routes/user/login');
@@ -31,9 +30,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // 注册session
 app.use(session({
-    secret: 'C0F81E480B02E8EBF1F25CDB12EDF81D',
-    name: 'www.idreambox.org',
-    cookie: {maxAge: 1000 * 60 * 30},
+    secret: config.session.secret,
+    name: config.session.id,
+    cookie: {maxAge: config.session.maxAge},
     resave: false,
     saveUninitialized: true
 }));
