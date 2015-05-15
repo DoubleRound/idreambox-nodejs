@@ -7,6 +7,6 @@ $(document).ready(function () {
             console.log("你可以通过这个方式找到我： %c 954155714@qq.com ", "color:#1e78e7");
             console.log("我的GitHub地址：https://github.com/DoubleRound");
         }
-    }()
+    }();
 
 });
