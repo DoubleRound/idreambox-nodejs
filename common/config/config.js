@@ -3,7 +3,7 @@
  **/
 require('../util/extends');
 
-var env = 'dev'; // dev or product
+var env = 'product'; // dev or product
 var devloper = 'WilsonTan'; // 开发者
 
 var settings = {
